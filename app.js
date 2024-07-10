@@ -8,7 +8,7 @@ const socketio=require("socket.io");
 const server=http.createServer(app);
 const io=socketio(server)
 
-app.set("view engine","ejs");
+app.set("view engine", "ejs");
 app.set(express.static(path.join(__dirname,"public")));  //to link the html css js files(frontend)
 
 io.on("connection", function(socket){
