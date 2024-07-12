@@ -16,11 +16,14 @@ if(navigator.geolocation){
  );
 }
 
-const map=L.map("map").setView([0,0],10);
+var map=L.map("map");
+map.setView([0,0],10);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
-    attribution:"OpenStreetMap"
-}).addTo(map)
+    
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
 const markers={};
 
